@@ -23,7 +23,7 @@
 .to-do-list__complete {
   border: solid;
   border-width: 5px;
-  border-color: black;
+  border-color: red;
   border-radius: 15px;
   padding: 10px;
   background-color: #90d0e9;
