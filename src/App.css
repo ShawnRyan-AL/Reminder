@@ -33,7 +33,6 @@
   width: 200px;
   overflow-y: auto;
   inline-size: 180px;
-  overflow-wrap: break-word;
 }
 
 .to-do-list__to-do-heading,
@@ -43,10 +42,27 @@
   font-weight: 500;
 }
 
-.list-item__text {
+.to-do-list__to-do-listing,
+.to-do-list__in-progress-listing,
+.to-do-list__complete-listing {
+  width: inherit;
+}
 
+.list-item {
+  display: grid;
+  grid-template-columns: 160px 20px;
+  overflow-wrap: break-word;
+  width: inherit;
+}
+
+.list-item__text {
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .list-item__button {
-  margin-left: 5px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 25px;
+  align-self: center;
 }
