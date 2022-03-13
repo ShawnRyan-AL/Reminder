@@ -49,15 +49,20 @@
 }
 
 .list-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 160px 20px;
   overflow-wrap: break-word;
   width: inherit;
 }
 
 .list-item__text {
-  width: calc(100% - 25px);
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .list-item__button {
-  margin-left: 5px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 25px;
+  align-self: center;
 }
